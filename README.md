@@ -8,9 +8,12 @@ A spatial data pipeline that evaluates the accuracy of NWS convective warnings b
 
 The National Weather Service issues polygon-based warnings to protect life and property. A warning is only considered "verified" if a qualifying ground-truth storm report occurs **inside the polygon** while the warning is **still active**. This project automates that verification process for a single high-impact event day and produces an interactive map showing which warnings were hits and which were false alarms.
 
+
+
 The target event is **April 27, 2026**, a Moderate Risk day across the Midwestern US with 380 total storm reports logged by the SPC (21 tornado, 234 wind, 125 hail, plus high wind and large hail reports).
 
-> **Note on tornado reports:** Storm surveys for this event are still ongoing. The tornado report count may increase as surveys conclude and previously unconfirmed tornadoes are verified. This is expected and reflects how ground-truth data works operationally.
+<img width="1499" height="806" alt="image" src="https://github.com/user-attachments/assets/c5a76ab1-70b3-4eeb-923c-152a8dca9ac7" />
+<figcaption>Severe Thunderstorm and Tornado warnings for April 27, 2026, overlaid with the resulting Local Storm Reports (LSRs) for that day.</figcaption>
 
 ---
 
@@ -73,6 +76,11 @@ The contrast between warning types tells an interesting story. SVR warnings veri
 On the SVR side, LMK and IND performed well with verification rates of 85.71% and 83.3% respectively. LZK stood out at the other end with only 1 verified warning out of 12 issued (8.33%).
 
 On the tornado side, overall verification rates were low across the board, consistent with the day's storm mode. ILX, LSX and IND issued the most tornado warnings (17, 26, and 9 respectively) with relatively few verifications.
+
+The top 5 WFO's that issued the most warnings were LSX (St. Louis, MO), ILX (Lincoln, IL), PAH (Paducah, KY), IND (Indianapolis, IN) and SGF (Springfield, MO)
+
+<img width="707" height="502" alt="image" src="https://github.com/user-attachments/assets/7c090a2b-8afd-45d7-b5ce-680384a58a44" />
+<figcaption>The Top 5 offices according to warnings issued and warnings verified.</figcaption>
 
 ---
 
