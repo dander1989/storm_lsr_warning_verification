@@ -1,7 +1,5 @@
 # StormVerify-Py: Automated NWS Warning Verification & Spatial Audit
 
-A spatial data pipeline that evaluates the accuracy of NWS convective warnings by joining them against ground-truth Local Storm Reports (LSRs) using DuckDB's spatial engine and Python.
-
 ---
 
 ## Overview
